@@ -48,7 +48,8 @@ public class HomeController {
         List<Movie> movies = getMovies();
         String movieList = "";
         for (Movie movie : movies) {
-            movieList += movie.getTitle() + ", ";
+            if (movies.get(movies.size() -1 ).equals(movie)) movieList += movie.getTitle() + "."; // se è l'ultimo elemento aggiungo il punto
+            else movieList += movie.getTitle() + ", "; // altrimenti la virgola
         }
 model.addAttribute("movielist", movieList);
         return "movies";
@@ -59,7 +60,8 @@ model.addAttribute("movielist", movieList);
             List<Song> songs = getSongs();
             String songList = "";
             for (Song song : songs) {
-                songList += song.getTitle() + ", ";
+                if (songs.get(songs.size() -1 ).equals(song)) songList += song.getTitle() + "."; // se è l'ultimo elemento aggiungo il punto
+                else songList += song.getTitle() + ", "; // altrimenti la virgola
             }
             model.addAttribute("songlist", songList);
             return "songs";
