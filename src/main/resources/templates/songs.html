@@ -6,10 +6,10 @@
 </head>
 <body>
 <nav th:replace="fragments :: navbar"></nav>
-<div class="container">
+<div class="container d-flex flex-column justify-content-center align-items-center">
     <h1>Lista delle canzoni</h1>
-    <ul>
-    <li th:each="song : ${songs}">
+    <ul class="list-group w-50 mb-2">
+    <li class="list-group-item" th:each="song : ${songs}">
         <a th:href="@{|/songs/${song.getId()}|}" th:text="${song.getTitle()}"></a>
     </li>
 </ul>

@@ -10,8 +10,8 @@
 </th:block>
 
 <body>
-<nav class="navbar navbar-expand-lg" th:fragment="navbar">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg mb-5" th:fragment="navbar">
+    <div class="container">
         <a class="navbar-brand" th:href="@{/}">Bestof</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -19,10 +19,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/movies}" th:classappend="${ movies != null ? 'active' : ''}">Film</a>
+                    <a class="btn me-1" th:href="@{/movies}" th:classappend="${ movies != null ? 'btn-primary' : 'btn-secondary'}">Film</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" th:href="@{/songs}" th:classappend="${ songs != null ? 'active' : ''}">Canzoni</a>
+                    <a class="btn" th:href="@{/songs}" th:classappend="${ songs != null ? 'btn-primary' : 'btn-secondary'}">Canzoni</a>
                 </li>
             </ul>
         </div>
