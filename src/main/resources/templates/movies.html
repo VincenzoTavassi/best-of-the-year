@@ -7,7 +7,9 @@
 <body>
 <h1>Lista dei film</h1>
 <ul>
-    <li th:each="movie : ${movies}" th:text="${movie.getTitle()}"></li>
+    <li th:each="movie : ${movies}">
+        <a th:href="@{|/movies/${movie.getId()}|}" th:text="${movie.getTitle()}"></a>
+    </li>
 </ul>
 <p>Torna alla <a href="/">Home</a></p>
 </body>

@@ -6,7 +6,11 @@
 </head>
 <body>
 <h1>Lista delle canzoni</h1>
-<p th:text="${songlist}"></p>
+<ul>
+    <li th:each="song : ${songs}">
+        <a th:href="@{|/songs/${song.getId()}|}" th:text="${song.getTitle()}"></a>
+    </li>
+</ul>
 <p>Torna alla <a href="/">Home</a></p>
 </body>
 </html>

@@ -63,7 +63,7 @@ public class HomeController {
     public String getSongIndex(Model model) {
         List<Song> songs = getSongs();
         model.addAttribute("songs", songs);
-        return "movies";
+        return "songs";
     }
 
     @GetMapping("/songs/{id}")
