@@ -5,12 +5,15 @@
     <title>Lista delle canzoni</title>
 </head>
 <body>
-<h1>Lista delle canzoni</h1>
-<ul>
+<nav th:replace="fragments :: navbar"></nav>
+<div class="container">
+    <h1>Lista delle canzoni</h1>
+    <ul>
     <li th:each="song : ${songs}">
         <a th:href="@{|/songs/${song.getId()}|}" th:text="${song.getTitle()}"></a>
     </li>
 </ul>
 <p>Torna alla <a href="/">Home</a></p>
+</div>
 </body>
 </html>

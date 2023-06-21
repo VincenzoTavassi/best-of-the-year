@@ -5,6 +5,8 @@
     <title>Lista dei film</title>
 </head>
 <body>
+<nav th:replace="fragments :: navbar"></nav>
+<div class="container">
 <h1>Lista dei film</h1>
 <ul>
     <li th:each="movie : ${movies}">
@@ -12,5 +14,6 @@
     </li>
 </ul>
 <p>Torna alla <a href="/">Home</a></p>
+</div>
 </body>
 </html>

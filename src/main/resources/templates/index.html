@@ -5,8 +5,11 @@
     <title>Best of the year</title>
 </head>
 <body>
+<nav th:replace="fragments :: navbar"></nav>
+<div class="container">
 <h1>Best of the year by <span th:text="${name}"></span></h1>
 <p>Vai ai <a href="/movies">Film</a></p>
 <p>Vai alle <a href="/songs">Canzoni</a></p>
+</div>
 </body>
 </html>
