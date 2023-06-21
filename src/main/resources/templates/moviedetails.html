@@ -2,13 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <th:block th:replace="fragments :: head"></th:block>
-    <title>Lista dei film</title>
+    <title>Details of [[${movie.getTitle()}]]</title>
 </head>
 <body>
-<h1>Lista dei film</h1>
-<ul>
-    <li th:each="movie : ${movies}" th:text="${movie.getTitle()}"></li>
-</ul>
+<h1>[[${movie.getTitle()}]]</h1>
+<p>id: <span th:text="${movie.getId()}"></span> </p>
+<p>Titolo: <span th:text="${movie.getTitle()}"></span> </p>
 <p>Torna alla <a href="/">Home</a></p>
 </body>
 </html>

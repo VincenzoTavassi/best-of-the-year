@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <th:block th:replace="fragments :: head"></th:block>
+    <title>Details of [[${song.getTitle()}]]</title>
+</head>
+<body>
+<h1>[[${song.getTitle()}]]</h1>
+<p>id: <span th:text="${song.getId()}"></span> </p>
+<p>Titolo: <span th:text="${song.getTitle()}"></span> </p>
+<p>Torna alla <a href="/">Home</a></p>
+</body>
+</html>
